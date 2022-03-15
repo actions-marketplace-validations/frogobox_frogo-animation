@@ -15,8 +15,8 @@ class MainActivity : AppCompatActivity() {
         val textView: TextView = findViewById(R.id.TextView)
 
         val render = Render(this)
-        render.setAnimation(Bounce().InDown(textView))
-        render.setDuration(2000)
+        render.setAnimation(Bounce().In(textView))
+        render.setDuration(50000)
         render.start()
     }
 }

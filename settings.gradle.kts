@@ -16,5 +16,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Kotlin Render Animations"
+rootProject.name = "FrogoAnimation"
 include(":app", ":library")
