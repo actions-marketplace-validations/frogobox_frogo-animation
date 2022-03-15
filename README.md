@@ -1,6 +1,5 @@
 ![ScreenShoot Apps](docs/image/ss_banner.png?raw=true)
 ## About This Project (release-and-work-in-progress 👷🔧️👷‍♀️⛏)
-
 [![Android CI](https://github.com/frogobox/frogo-android-animation/actions/workflows/android-ci.yml/badge.svg)](https://github.com/frogobox/frogo-android-animation/actions/workflows/android-ci.yml)
 [![Scan with Detekt](https://github.com/frogobox/frogo-android-animation/actions/workflows/detekt.yml/badge.svg)](https://github.com/frogobox/frogo-android-animation/actions/workflows/detekt.yml)
 - Android View Animations in Kotlin
@@ -9,12 +8,12 @@
 This Is Latest Release
 
     ~ Beta Release
-    $version_release = 0.0.1-beta09
+    $version_release = 0.0.1-beta01
 
 What's New??
 
-    * SDK Android and Desktop *
     * Beta Release *
+    * Android Kotlin Animation *
 
 ## Screen Shot
 <img width="360" alt="Android View Animations in Java" src="https://gayanvoice.github.io/android-animations/static/media/2-android-view-animations-java.1fe3487e.gif"> <img width="360" alt="Android View Animations in Java" src="https://gayanvoice.github.io/android-animations/static/media/0-android-view-animations-java.57f29c80.gif">
@@ -52,27 +51,20 @@ allprojects {
     #### <Option 1> Groovy Gradle
 
         dependencies {
-            // library frogo-sdk
-            implementation 'com.github.frogobox:frogo-sdk:0.0.1-beta09'
+            // library frogo-animation
+            implementation 'com.github.frogobox:frogo-animation:0.0.1-beta01'
         }
 
     #### <Option 2> Kotlin DSL Gradle
 
         dependencies {
-            // library frogo-sdk
-            implementation("com.github.frogobox:frogo-sdk:0.0.1-beta09")
+            // library frogo-animation
+            implementation("com.github.frogobox:frogo-animation:0.0.1-beta01")
         }
 
 ## Step 3. Call FrogoAnimation
-#### Import render animations
 
-```java
-import render.animations.*
-```
-
-#### Start animation
-
-```java
+```kotlin
 // Declare TextView
 val textView: TextView = findViewById(R.id.TextView)
 
