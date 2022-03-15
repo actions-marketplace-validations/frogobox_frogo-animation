@@ -3,6 +3,8 @@
 [![Android CI](https://github.com/frogobox/frogo-android-animation/actions/workflows/android-ci.yml/badge.svg)](https://github.com/frogobox/frogo-android-animation/actions/workflows/android-ci.yml)
 [![Scan with Detekt](https://github.com/frogobox/frogo-android-animation/actions/workflows/detekt.yml/badge.svg)](https://github.com/frogobox/frogo-android-animation/actions/workflows/detekt.yml)
 - Android View Animations in Kotlin
+- Privacy Policy [Click Here](https://github.com/frogobox/frogo-animation/blob/master/PRIVACY-POLICY.md)
+- License [Click Here](https://github.com/frogobox/frogo-animation/blob/master/LICENSE)
 
 ## Version Release
 This Is Latest Release
