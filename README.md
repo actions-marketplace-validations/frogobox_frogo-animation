@@ -1,5 +1,6 @@
 ![ScreenShoot Apps](docs/image/ss_banner.png?raw=true)
 ## About This Project (release-and-work-in-progress 👷🔧️👷‍♀️⛏)
+[![](https://jitpack.io/v/frogobox/frogo-animation.svg)](https://jitpack.io/#frogobox/frogo-animation)
 [![Android CI](https://github.com/frogobox/frogo-android-animation/actions/workflows/android-ci.yml/badge.svg)](https://github.com/frogobox/frogo-android-animation/actions/workflows/android-ci.yml)
 [![Scan with Detekt](https://github.com/frogobox/frogo-android-animation/actions/workflows/detekt.yml/badge.svg)](https://github.com/frogobox/frogo-android-animation/actions/workflows/detekt.yml)
 - Android View Animations in Kotlin
