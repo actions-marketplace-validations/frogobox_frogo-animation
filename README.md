@@ -3,6 +3,7 @@
 
 [![Android CI](https://github.com/frogobox/frogo-android-animation/actions/workflows/android-ci.yml/badge.svg)](https://github.com/frogobox/frogo-android-animation/actions/workflows/android-ci.yml)
 [![Scan with Detekt](https://github.com/frogobox/frogo-android-animation/actions/workflows/detekt.yml/badge.svg)](https://github.com/frogobox/frogo-android-animation/actions/workflows/detekt.yml)
+- Android View Animations in Kotlin
 
 ## Version Release
 This Is Latest Release
