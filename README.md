@@ -1,80 +1,68 @@
-# Android View Animations in Kotlin
-[![Build Status](https://travis-ci.org/gayanvoice/android-animations-kotlin.svg?branch=master)](https://travis-ci.org/gayanvoice/android-animations-kotlin)
-[![](https://jitpack.io/v/gayanvoice/android-view-animations-kotlin.svg)](https://jitpack.io/#gayanvoice/android-view-animations-kotlin)
-[![API](https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=14)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/gayanvoice/android-view-animations-kotlin)
+![ScreenShoot Apps](docs/image/ss_banner.png?raw=true)
+## About This Project (release-and-work-in-progress 👷🔧️👷‍♀️⛏)
 
+[![Android CI](https://github.com/frogobox/frogo-android-animation/actions/workflows/android-ci.yml/badge.svg)](https://github.com/frogobox/frogo-android-animation/actions/workflows/android-ci.yml)
+[![Scan with Detekt](https://github.com/frogobox/frogo-android-animation/actions/workflows/detekt.yml/badge.svg)](https://github.com/frogobox/frogo-android-animation/actions/workflows/detekt.yml)
+
+## Version Release
+This Is Latest Release
+
+    ~ Beta Release
+    $version_release = 0.0.1-beta09
+
+What's New??
+
+    * SDK Android and Desktop *
+    * Beta Release *
+
+## Screen Shot
 <img width="360" alt="Android View Animations in Java" src="https://gayanvoice.github.io/android-animations/static/media/2-android-view-animations-java.1fe3487e.gif"> <img width="360" alt="Android View Animations in Java" src="https://gayanvoice.github.io/android-animations/static/media/0-android-view-animations-java.57f29c80.gif">
 
-## Get
+## Download this project
 
-### Gradle
+### Step 1. Add the JitPack repository to your build file (build.gradle : Project)
 
-1. Add this to `build.gradle` of project gradle dependency
+#### <Option 1> Groovy Gradle
 
-```groovy
+    // Add it in your root build.gradle at the end of repositories:
+
+    allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+        }
+    }
+
+#### <Option 2> Kotlin DSL Gradle
+
+```kotlin
+// Add it in your root build.gradle.kts at the end of repositories:
+
 allprojects {
-	repositories {
-		...
- 		maven { url 'https://jitpack.io' }
-	}
+    repositories {
+        ...
+        maven { url = uri("https://jitpack.io") }
+    }
 }
 ```
 
-2. Add this to `build.gradle` of app gradle dependency
+### Step 2. Add the dependency (build.gradle : Module)
 
-```groovy
-dependencies {
-	implementation 'com.github.gayanvoice:android-animations-kotlin:1.0.1'
-}
-```
+    #### <Option 1> Groovy Gradle
 
-### Or
+        dependencies {
+            // library frogo-sdk
+            implementation 'com.github.frogobox:frogo-sdk:0.0.1-beta09'
+        }
 
-### Maven
+    #### <Option 2> Kotlin DSL Gradle
 
-1. Add this to `build.gradle` of project gradle dependency
+        dependencies {
+            // library frogo-sdk
+            implementation("com.github.frogobox:frogo-sdk:0.0.1-beta09")
+        }
 
-```xml
-<repositories>
-	<repository>
-		<id>jitpack.io</id>
-	    	<url>https://jitpack.io</url>
-	</repository>
-</repositories>
-```
-
-2. Add this to `build.gradle` of module gradle dependency
-
-```xml
-<dependency>
-	<groupId>com.github.gayanvoice</groupId>
-	<artifactId>android-animations-kotlin</artifactId>
-	<version>1.0.1</version>
-</dependency>
-```
-## Usage
-### Java
-#### Import render animations
-
-```java
-import render.animations.*;
-```
-
-#### Start animation
-
-```java
-// Declare TextView
-TextView AppleText = findViewById(R.id.TextView);
-
-// Create Render Class
-Render render = new Render(MainActivity.this);
-
-// Set Animation
-render.setAnimation(Attention.Wobble(AppleText));
-render.start();
-```
-### Kotlin
+## Step 3. Call FrogoAnimation
 #### Import render animations
 
 ```java
@@ -169,14 +157,29 @@ To animate the view, add the class name and specific animation method name`setAn
 
 This android view animations library supports number of animations. Go to the java version of this library to see the gallery of animations. Click here https://github.com/gayanvoice/android-view-animations-java#animations
 
-## Develop the library
+## Colaborator
+Very open to anyone, I'll write your name under this, please contribute by sending an email to me
 
-1. Select `Git` from `Check out project from Version Control` in your Android Studio
-2. Paste the repository url and click `Clone` button
-3. Click `Yes` to open the repository
-4. `Build` using the latest `Gradle` version
+- Mail To faisalamircs@gmail.com
+- Subject : Github _ [Github-Username-Account] _ [Language] _ [Repository-Name]
+- Example : Github_amirisback_kotlin_admob-helper-implementation
 
-Go to https://github.com/gayanvoice/android-vpn-client-ics-openvpn#develop see the steps
+Name Of Contribute
+- [Gayan Kuruppu](https://github.com/gayanvoice)
+- [代码家](https://github.com/daimajia)
+- Muhammad Faisal Amir
+- Waiting List
+- Waiting List
 
-## Thanks
-This library is based on https://github.com/daimajia/AndroidViewAnimations and the Java version of this library is available in  https://github.com/gayanvoice/android-view-animations-java
+Waiting for your contribute
+
+## Inspiration
+- https://github.com/gayanvoice/android-animations-kotlin
+- https://github.com/gayanvoice/android-view-animations-java
+- https://github.com/daimajia/AndroidViewAnimations
+
+## Attention !!!
+- Please enjoy and don't forget fork and give a star
+- Don't Forget Follow My Github Account
+
+![ScreenShoot Apps](docs/image/mad_score.png?raw=true)
