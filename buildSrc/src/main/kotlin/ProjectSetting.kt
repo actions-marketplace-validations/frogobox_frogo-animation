@@ -13,16 +13,16 @@
 
 object ProjectSetting {
 
-    const val NAME_APP = "Frogo SDK"
+    const val NAME_APP = "Frogo Animation"
 
     const val APP_DOMAIN = "com"
     const val APP_PLAY_CONSOLE = "frogobox"
-    const val APP_NAME = "appsdk"
+    const val APP_NAME = "appanimation"
 
-    const val LIBRARY_NAME_SDK = "library"
+    const val LIBRARY_NAME_SDK = "animation"
     const val LIBRARY_NAME_CORE_SDK = "coresdk"
 
-    const val MODULE_NAME_SDK = "frogolibrary"
+    const val MODULE_NAME_SDK = "frogoanimation"
     const val MODULE_NAME_CORE_SDK = "frogocoresdk"
 
     // ---------------------------------------------------------------------------------------------

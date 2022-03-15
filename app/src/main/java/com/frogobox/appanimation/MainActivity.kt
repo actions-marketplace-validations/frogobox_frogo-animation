@@ -1,9 +1,10 @@
-package android.render.demo
+package com.frogobox.appanimation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import render.animations.*
+import com.frogobox.animation.Bounce
+import com.frogobox.animation.FrogoAnimation
 import kotlin.render.demo.R
 
 class MainActivity : AppCompatActivity() {
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         val textView: TextView = findViewById(R.id.TextView)
 
-        val render = Render(this)
+        val render = FrogoAnimation(this)
         render.setAnimation(Bounce().In(textView))
         render.setDuration(50000)
         render.start()

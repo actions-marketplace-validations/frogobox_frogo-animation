@@ -90,6 +90,5 @@ dependencies {
     implementation(Androidx.constraintLayout)
     implementation(Androidx.Core.ktx)
     implementation(Androidx.Work.runtimeKtx)
-    
-    implementation(project(":library"))
+    implementation(project(":frogoanimation"))
 }

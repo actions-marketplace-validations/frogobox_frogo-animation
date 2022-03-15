@@ -17,4 +17,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "FrogoAnimation"
-include(":app", ":library")
+include(":app", ":frogoanimation")

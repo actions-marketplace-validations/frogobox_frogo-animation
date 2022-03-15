@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package render.animations
+package com.frogobox.animation
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
@@ -35,7 +35,7 @@ https://github.com/gayankuruppu/android-view-animations-java/blob/master/library
 */
 
 class Zoom {
-    fun In (view: View) :AnimatorSet{
+    fun In(view: View): AnimatorSet {
         val animatorSet = AnimatorSet()
 
         val object1 = ObjectAnimator.ofFloat(view, "scaleX", 0.45f, 1f)
@@ -46,7 +46,7 @@ class Zoom {
         return animatorSet
     }
 
-    fun InDown (view: View) :AnimatorSet{
+    fun InDown(view: View): AnimatorSet {
         val animatorSet = AnimatorSet()
         val bottom = -view.bottom.toFloat()
 
@@ -59,7 +59,7 @@ class Zoom {
         return animatorSet
     }
 
-    fun InLeft (view: View) :AnimatorSet{
+    fun InLeft(view: View): AnimatorSet {
         val animatorSet = AnimatorSet()
         val right = -view.right.toFloat()
 
@@ -72,7 +72,7 @@ class Zoom {
         return animatorSet
     }
 
-    fun InRight (view: View) :AnimatorSet{
+    fun InRight(view: View): AnimatorSet {
         val animatorSet = AnimatorSet()
         val width = -view.width.toFloat()
         val right = -view.paddingRight.toFloat()
@@ -86,7 +86,7 @@ class Zoom {
         return animatorSet
     }
 
-    fun InUp (view: View) :AnimatorSet{
+    fun InUp(view: View): AnimatorSet {
         val animatorSet = AnimatorSet()
         val parent = view.parent as ViewGroup
         val distance = (parent.height - view.top).toFloat()
@@ -104,7 +104,7 @@ class Zoom {
     Out
      */
 
-    fun Out (view: View) :AnimatorSet{
+    fun Out(view: View): AnimatorSet {
         val animatorSet = AnimatorSet()
 
         val object1 = ObjectAnimator.ofFloat(view, "alpha", 1f, 0f, 0f)
@@ -115,7 +115,7 @@ class Zoom {
         return animatorSet
     }
 
-    fun OutDown (view: View) :AnimatorSet{
+    fun OutDown(view: View): AnimatorSet {
         val animatorSet = AnimatorSet()
         val parent = view.parent as ViewGroup
         val distance = (parent.height - view.top).toFloat()
@@ -130,8 +130,7 @@ class Zoom {
     }
 
 
-
-    fun OutLeft (view: View) :AnimatorSet{
+    fun OutLeft(view: View): AnimatorSet {
         val animatorSet = AnimatorSet()
         val right = -view.right.toFloat()
 
@@ -144,7 +143,7 @@ class Zoom {
         return animatorSet
     }
 
-    fun OutRight (view: View) :AnimatorSet{
+    fun OutRight(view: View): AnimatorSet {
         val animatorSet = AnimatorSet()
         val parent = view.parent as ViewGroup
         val distance = (parent.width - parent.left).toFloat()
@@ -158,7 +157,7 @@ class Zoom {
         return animatorSet
     }
 
-    fun OutUp (view: View) :AnimatorSet{
+    fun OutUp(view: View): AnimatorSet {
         val animatorSet = AnimatorSet()
         val bottom = -view.bottom.toFloat()
 
@@ -170,8 +169,6 @@ class Zoom {
         animatorSet.playTogether(object1, object2, object3, object4)
         return animatorSet
     }
-
-
 
 
 }
