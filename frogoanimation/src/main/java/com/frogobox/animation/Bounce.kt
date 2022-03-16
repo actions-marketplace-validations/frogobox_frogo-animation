@@ -33,7 +33,7 @@ Java version of the Bounce class
 https://github.com/gayankuruppu/android-view-animations-java/blob/master/library/src/main/java/render/animations/Bounce.java
 */
 
-class Bounce {
+object Bounce {
     fun In(view: View): AnimatorSet {
         val animatorSet = AnimatorSet()
 

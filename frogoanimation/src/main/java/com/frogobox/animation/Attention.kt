@@ -33,7 +33,8 @@ Java version of the Attention class
 https://github.com/gayankuruppu/android-view-animations-java/blob/master/library/src/main/java/render/animations/Attention.java
 */
 
-class Attention {
+object Attention {
+
     fun Bounce(view: View): AnimatorSet {
         val animatorSet = AnimatorSet()
 

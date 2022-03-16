@@ -38,13 +38,12 @@
 package com.frogobox.animation
 
 import android.animation.AnimatorSet
-import android.content.Context
 import android.view.animation.AccelerateInterpolator
 
-class FrogoAnimation(var cx: Context) {
-    var du: Long = 1000
+class FrogoAnimation {
 
-    lateinit var animatorSet: AnimatorSet
+    private var du: Long = 1000
+    private lateinit var animatorSet: AnimatorSet
 
     fun setAnimation(animatorSet: AnimatorSet) {
         this.animatorSet = animatorSet

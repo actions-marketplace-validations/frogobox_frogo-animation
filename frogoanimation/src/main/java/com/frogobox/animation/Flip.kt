@@ -34,7 +34,7 @@ https://github.com/gayankuruppu/android-view-animations-java/blob/master/library
 */
 
 
-class Flip {
+object Flip {
     fun InX(view: View): AnimatorSet {
         val animatorSet = AnimatorSet()
 

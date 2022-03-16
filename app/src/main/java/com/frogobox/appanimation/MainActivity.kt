@@ -15,9 +15,9 @@ class MainActivity : AppCompatActivity() {
 
         val textView: TextView = findViewById(R.id.TextView)
 
-        val render = FrogoAnimation(this)
-        render.setAnimation(Bounce().In(textView))
-        render.setDuration(50000)
-        render.start()
+        val frogoAnimation = FrogoAnimation()
+        frogoAnimation.setAnimation(Bounce.In(textView))
+        frogoAnimation.setDuration(50000)
+        frogoAnimation.start()
     }
 }
