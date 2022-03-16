@@ -22,6 +22,14 @@ interface IFrogoAnimation {
 
     fun setDuration(duration: Long)
 
+    fun setRepeated()
+
+    fun setRepeated(repeatCount: Int)
+
+    fun setRepeatModeReverse()
+
+    fun setRepeatModeRestart()
+
     fun start()
 
 }

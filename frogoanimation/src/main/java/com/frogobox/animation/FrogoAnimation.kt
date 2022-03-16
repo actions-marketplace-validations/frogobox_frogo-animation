@@ -38,11 +38,17 @@
 package com.frogobox.animation
 
 import android.animation.AnimatorSet
-import android.view.animation.AccelerateInterpolator
+import android.animation.ObjectAnimator
+import android.view.animation.LinearInterpolator
 
 class FrogoAnimation : IFrogoAnimation {
 
     private var du: Long = 1000
+    private var isRepeated = false
+    private var usingRepeatMode = false
+    private var mRepeatCount = ObjectAnimator.INFINITE
+    private var mRepeatMode = ObjectAnimator.RESTART
+
     private lateinit var animatorSet: AnimatorSet
 
     override fun setAnimation(animatorSet: AnimatorSet) {
@@ -53,10 +59,37 @@ class FrogoAnimation : IFrogoAnimation {
         this.du = duration
     }
 
+    fun setRepeated() {
+        isRepeated = true
+    }
+
+    override fun setRepeated(repeatCount: Int) {
+        isRepeated = true
+        mRepeatCount = repeatCount
+    }
+
+    override fun setRepeatModeReverse() {
+        usingRepeatMode = true
+        mRepeatMode = ObjectAnimator.REVERSE
+    }
+
+    override fun setRepeatModeRestart() {
+        usingRepeatMode = true
+    }
+
     override fun start() {
         animatorSet.apply {
             duration = du
-            interpolator = AccelerateInterpolator()
+            interpolator = LinearInterpolator()
+            childAnimations.forEach {
+                val animator = it as ObjectAnimator
+                if (isRepeated) {
+                    animator.repeatCount = mRepeatCount
+                }
+                if (usingRepeatMode) {
+                    animator.repeatMode = mRepeatMode
+                }
+            }
         }.start()
     }
 

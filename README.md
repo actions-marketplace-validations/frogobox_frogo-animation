@@ -67,9 +67,29 @@ allprojects {
 
 ## Step 3. Call FrogoAnimation
 
+### Easy Use Animation
+
 ```kotlin
 FrogoAnimation().apply {
     setAnimation(Bounce.In(binding.TextView))
+    setDuration(1500)
+}.start()
+```
+
+### Repeated Infinite
+```kotlin
+FrogoAnimation().apply {
+    setAnimation(Attention.Ruberband(binding.TextView))
+    setRepeated()
+    setDuration(1500)
+}.start()
+```
+
+### Repeated Count
+```kotlin
+FrogoAnimation().apply {
+    setAnimation(Attention.Ruberband(binding.TextView))
+    setRepeated(20)
     setDuration(1500)
 }.start()
 ```
