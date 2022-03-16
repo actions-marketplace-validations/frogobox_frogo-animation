@@ -36,7 +36,7 @@ https://github.com/gayankuruppu/android-view-animations-java/blob/master/library
 
 object Flip : IFlip {
 
-    fun InX(view: View): AnimatorSet {
+    override fun InX(view: View): AnimatorSet {
         val object1 = ObjectAnimator.ofFloat(view, "alpha", 0.25f, 0.5f, 0.75f, 1f)
         val object2 = ObjectAnimator.ofFloat(view, "rotationX", 90f, -15f, 15f, 0f)
         return AnimatorSet().apply {
@@ -44,7 +44,7 @@ object Flip : IFlip {
         }
     }
 
-    fun InY(view: View): AnimatorSet {
+    override fun InY(view: View): AnimatorSet {
         val object1 = ObjectAnimator.ofFloat(view, "alpha", 0.25f, 0.5f, 0.75f, 1f)
         val object2 = ObjectAnimator.ofFloat(view, "rotationY", 90f, -15f, 15f, 0f)
         return AnimatorSet().apply {
@@ -52,7 +52,7 @@ object Flip : IFlip {
         }
     }
 
-    fun OutX(view: View): AnimatorSet {
+    override fun OutX(view: View): AnimatorSet {
         val object1 = ObjectAnimator.ofFloat(view, "alpha", 1f, 0f)
         val object2 = ObjectAnimator.ofFloat(view, "rotationX", 0f, 90f)
         return AnimatorSet().apply {
@@ -60,7 +60,7 @@ object Flip : IFlip {
         }
     }
 
-    fun OutY(view: View): AnimatorSet {
+    override fun OutY(view: View): AnimatorSet {
         val object1 = ObjectAnimator.ofFloat(view, "alpha", 1f, 0f)
         val object2 = ObjectAnimator.ofFloat(view, "rotationY", 0f, 90f)
         return AnimatorSet().apply {
