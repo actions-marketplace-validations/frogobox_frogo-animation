@@ -59,7 +59,7 @@ class FrogoAnimation : IFrogoAnimation {
         this.du = duration
     }
 
-    fun setRepeated() {
+    override fun setRepeated() {
         isRepeated = true
     }
 
