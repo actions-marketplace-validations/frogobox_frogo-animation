@@ -1,5 +1,8 @@
 package com.frogobox.animation.core
 
+import android.animation.AnimatorSet
+import android.view.View
+
 
 /*
  * Created by faisalamir on 16/03/22
@@ -15,4 +18,25 @@ package com.frogobox.animation.core
  */
 
 interface IZoom {
+
+    fun In(view: View): AnimatorSet
+
+    fun InDown(view: View): AnimatorSet
+
+    fun InLeft(view: View): AnimatorSet
+
+    fun InRight(view: View): AnimatorSet
+
+    fun InUp(view: View): AnimatorSet
+
+    fun Out(view: View): AnimatorSet
+
+    fun OutDown(view: View): AnimatorSet
+
+    fun OutLeft(view: View): AnimatorSet
+
+    fun OutRight(view: View): AnimatorSet
+
+    fun OutUp(view: View): AnimatorSet
+
 }

@@ -1,5 +1,8 @@
 package com.frogobox.animation.core
 
+import android.animation.AnimatorSet
+import android.view.View
+
 
 /*
  * Created by faisalamir on 16/03/22
@@ -15,4 +18,13 @@ package com.frogobox.animation.core
  */
 
 interface IFlip {
+
+    fun InX(view: View): AnimatorSet
+
+    fun InY(view: View): AnimatorSet
+
+    fun OutX(view: View): AnimatorSet
+
+    fun OutY(view: View): AnimatorSet
+
 }

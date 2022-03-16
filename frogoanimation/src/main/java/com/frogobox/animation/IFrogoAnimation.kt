@@ -1,4 +1,4 @@
-package com.frogobox.animation.core
+package com.frogobox.animation
 
 
 /*

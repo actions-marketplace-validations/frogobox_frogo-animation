@@ -35,9 +35,9 @@ https://github.com/gayankuruppu/android-view-animations-java/blob/master/library
 */
 
 object Slide : ISlide {
-    
-    fun InDown(view: View): AnimatorSet {
-        
+
+    override fun InDown(view: View): AnimatorSet {
+
         val distance = (view.top + view.height).toFloat()
 
         val object1 = ObjectAnimator.ofFloat(view, "alpha", 0f, 1f)
@@ -46,11 +46,11 @@ object Slide : ISlide {
         return AnimatorSet().apply {
             playTogether(object1, object2)
         }
-        
+
     }
 
-    fun InLeft(view: View): AnimatorSet {
-        
+    override fun InLeft(view: View): AnimatorSet {
+
         val parent = view.parent as ViewGroup
         val distance = (parent.width - view.left).toFloat()
 
@@ -63,8 +63,8 @@ object Slide : ISlide {
 
     }
 
-    fun InRight(view: View): AnimatorSet {
-        
+    override fun InRight(view: View): AnimatorSet {
+
         val parent = view.parent as ViewGroup
         val distance = (parent.width - view.left).toFloat()
 
@@ -77,8 +77,8 @@ object Slide : ISlide {
 
     }
 
-    fun InUp(view: View): AnimatorSet {
-        
+    override fun InUp(view: View): AnimatorSet {
+
         val parent = view.parent as ViewGroup
         val distance = (parent.height - view.top).toFloat()
 
@@ -91,8 +91,8 @@ object Slide : ISlide {
 
     }
 
-    fun OutDown(view: View): AnimatorSet {
-        
+    override fun OutDown(view: View): AnimatorSet {
+
         val parent = view.parent as ViewGroup
         val distance = (parent.height - view.top).toFloat()
 
@@ -105,8 +105,8 @@ object Slide : ISlide {
 
     }
 
-    fun OutLeft(view: View): AnimatorSet {
-        
+    override fun OutLeft(view: View): AnimatorSet {
+
         val right = view.right.toFloat()
 
         val object1 = ObjectAnimator.ofFloat(view, "alpha", 1f, 0f)
@@ -118,8 +118,8 @@ object Slide : ISlide {
 
     }
 
-    fun OutRight(view: View): AnimatorSet {
-        
+    override fun OutRight(view: View): AnimatorSet {
+
         val parent = view.parent as ViewGroup
         val distance = (parent.width - view.left).toFloat()
 
@@ -132,8 +132,8 @@ object Slide : ISlide {
 
     }
 
-    fun OutUp(view: View): AnimatorSet {
-        
+    override fun OutUp(view: View): AnimatorSet {
+
         val bottom = -view.bottom.toFloat()
 
         val object1 = ObjectAnimator.ofFloat(view, "alpha", 1f, 0f)

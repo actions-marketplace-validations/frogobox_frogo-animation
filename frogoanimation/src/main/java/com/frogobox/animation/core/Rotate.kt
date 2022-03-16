@@ -35,7 +35,7 @@ https://github.com/gayankuruppu/android-view-animations-java/blob/master/library
 
 object Rotate : IRotate {
 
-    fun In(view: View): AnimatorSet {
+    override fun In(view: View): AnimatorSet {
 
         val object1 = ObjectAnimator.ofFloat(view, "alpha", 0f, 1f)
         val object2 = ObjectAnimator.ofFloat(view, "rotation", -200f, 0f)
@@ -45,7 +45,7 @@ object Rotate : IRotate {
         }
     }
 
-    fun InDownLeft(view: View): AnimatorSet {
+    override fun InDownLeft(view: View): AnimatorSet {
 
         val x = view.paddingLeft.toFloat()
         val y = (view.height - view.paddingBottom).toFloat()
@@ -61,7 +61,7 @@ object Rotate : IRotate {
 
     }
 
-    fun InDownRight(view: View): AnimatorSet {
+    override fun InDownRight(view: View): AnimatorSet {
 
         val x = (view.width - view.paddingRight).toFloat()
         val y = (view.height - view.paddingBottom).toFloat()
@@ -77,7 +77,7 @@ object Rotate : IRotate {
 
     }
 
-    fun InUpLeft(view: View): AnimatorSet {
+    override fun InUpLeft(view: View): AnimatorSet {
 
         val x = view.paddingLeft.toFloat()
         val y = view.height - view.paddingBottom.toFloat()
@@ -93,7 +93,7 @@ object Rotate : IRotate {
 
     }
 
-    fun InUpRight(view: View): AnimatorSet {
+    override fun InUpRight(view: View): AnimatorSet {
 
         val x = (view.width - view.paddingRight).toFloat()
         val y = (view.height - view.paddingBottom).toFloat()
@@ -113,7 +113,7 @@ object Rotate : IRotate {
     out
      */
 
-    fun Out(view: View): AnimatorSet {
+    override fun Out(view: View): AnimatorSet {
 
         val object1 = ObjectAnimator.ofFloat(view, "alpha", 1f, 0f)
         val object2 = ObjectAnimator.ofFloat(view, "rotation", 0f, 200f)
@@ -124,7 +124,7 @@ object Rotate : IRotate {
 
     }
 
-    fun OutDownLeft(view: View): AnimatorSet {
+    override fun OutDownLeft(view: View): AnimatorSet {
 
         val x = view.paddingLeft.toFloat()
         val y = (view.height - view.paddingBottom).toFloat()
@@ -141,7 +141,7 @@ object Rotate : IRotate {
     }
 
 
-    fun OutDownRight(view: View): AnimatorSet {
+    override fun OutDownRight(view: View): AnimatorSet {
 
         val x = (view.width - view.paddingRight).toFloat()
         val y = (view.height - view.paddingBottom).toFloat()
@@ -157,7 +157,7 @@ object Rotate : IRotate {
 
     }
 
-    fun OutUpLeft(view: View): AnimatorSet {
+    override fun OutUpLeft(view: View): AnimatorSet {
 
         val x = (view.paddingLeft).toFloat()
         val y = (view.height - view.paddingBottom).toFloat()
@@ -173,7 +173,7 @@ object Rotate : IRotate {
 
     }
 
-    fun OutUpRight(view: View): AnimatorSet {
+    override fun OutUpRight(view: View): AnimatorSet {
 
         val x = (view.width - view.paddingRight).toFloat()
         val y = (view.height - view.paddingBottom).toFloat()
