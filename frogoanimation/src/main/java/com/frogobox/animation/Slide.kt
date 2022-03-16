@@ -34,7 +34,7 @@ Java version of the Slide class
 https://github.com/gayankuruppu/android-view-animations-java/blob/master/library/src/main/java/render/animations/Slide.java
 */
 
-object Slide {
+object Slide : ISlide{
     fun InDown(view: View): AnimatorSet {
         val animatorSet = AnimatorSet()
         val distance = (view.top + view.height).toFloat()

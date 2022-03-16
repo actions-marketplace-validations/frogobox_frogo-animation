@@ -1,23 +1,26 @@
 package com.frogobox.appanimation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.frogobox.animation.Bounce
 import com.frogobox.animation.FrogoAnimation
-import kotlin.render.demo.R
+import kotlin.render.demo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    private val binding: ActivityMainBinding by lazy {
+        ActivityMainBinding.inflate(layoutInflater)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
-        val textView: TextView = findViewById(R.id.TextView)
+        FrogoAnimation().apply {
+            setAnimation(Bounce.In(binding.TextView))
+            setDuration(1500)
+        }.start()
 
-        val frogoAnimation = FrogoAnimation()
-        frogoAnimation.setAnimation(Bounce.In(textView))
-        frogoAnimation.setDuration(50000)
-        frogoAnimation.start()
     }
+
 }

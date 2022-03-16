@@ -33,7 +33,7 @@ Java version of the Fade class
 https://github.com/gayankuruppu/android-view-animations-java/blob/master/library/src/main/java/render/animations/Fade.java
 */
 
-object Fade {
+object Fade : IFade {
     fun In(view: View): AnimatorSet {
         val animatorSet = AnimatorSet()
 

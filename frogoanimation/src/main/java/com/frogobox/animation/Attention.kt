@@ -36,59 +36,50 @@ https://github.com/gayankuruppu/android-view-animations-java/blob/master/library
 object Attention : IAttention {
 
     override fun Bounce(view: View): AnimatorSet {
-        val object1: ObjectAnimator =
-            ObjectAnimator.ofFloat(view, "translationY", 0f, 0f, -30f, 0f, -15f, 0f, 0f)
+        val object1 = ObjectAnimator.ofFloat(view, "translationY", 0f, 0f, -30f, 0f, -15f, 0f, 0f)
         return AnimatorSet().apply {
             playTogether(object1)
         }
     }
 
     override fun Flash(view: View): AnimatorSet {
-        val object1: ObjectAnimator = ObjectAnimator.ofFloat(view, "alpha", 1f, 0f, 1f, 0f, 1f)
+        val object1 = ObjectAnimator.ofFloat(view, "alpha", 1f, 0f, 1f, 0f, 1f)
         return AnimatorSet().apply {
             playTogether(object1)
         }
     }
 
     override fun Pulse(view: View): AnimatorSet {
-        val object1: ObjectAnimator = ObjectAnimator.ofFloat(view, "scaleY", 1f, 1.1f, 1f)
-        val object2: ObjectAnimator = ObjectAnimator.ofFloat(view, "scaleX", 1f, 1.1f, 1f)
+        val object1 = ObjectAnimator.ofFloat(view, "scaleY", 1f, 1.1f, 1f)
+        val object2 = ObjectAnimator.ofFloat(view, "scaleX", 1f, 1.1f, 1f)
         return AnimatorSet().apply {
             playTogether(object1, object2)
         }
     }
 
     override fun Ruberband(view: View): AnimatorSet {
-        val object1: ObjectAnimator =
-            ObjectAnimator.ofFloat(view, "scaleX", 1f, 1.25f, 0.75f, 1.15f, 1f)
-        val object2: ObjectAnimator =
-            ObjectAnimator.ofFloat(view, "scaleY", 1f, 0.75f, 1.25f, 0.85f, 1f)
-
+        val object1 = ObjectAnimator.ofFloat(view, "scaleX", 1f, 1.25f, 0.75f, 1.15f, 1f)
+        val object2 = ObjectAnimator.ofFloat(view, "scaleY", 1f, 0.75f, 1.25f, 0.85f, 1f)
         return AnimatorSet().apply {
             playTogether(object1, object2)
         }
     }
 
     override fun Shake(view: View): AnimatorSet {
-        val object1: ObjectAnimator =
-            ObjectAnimator.ofFloat(view, "scaleX", 1f, 1.25f, 0.75f, 1.15f, 1f)
-        val object2: ObjectAnimator =
-            ObjectAnimator.ofFloat(view, "scaleY", 1f, 0.75f, 1.25f, 0.85f, 1f)
-
+        val object1 = ObjectAnimator.ofFloat(view, "scaleX", 1f, 1.25f, 0.75f, 1.15f, 1f)
+        val object2 = ObjectAnimator.ofFloat(view, "scaleY", 1f, 0.75f, 1.25f, 0.85f, 1f)
         return AnimatorSet().apply {
             playTogether(object1, object2)
         }
     }
 
     override fun Standup(view: View): AnimatorSet {
-        val x =
-            ((view.width - view.paddingLeft - view.paddingRight) / 2 + view.paddingLeft).toFloat()
+        val x = ((view.width - view.paddingLeft - view.paddingRight) / 2 + view.paddingLeft).toFloat()
         val y = (view.height - view.paddingBottom).toFloat()
 
-        val object1: ObjectAnimator = ObjectAnimator.ofFloat(view, "pivotX", x, x, x, x, x)
-        val object2: ObjectAnimator = ObjectAnimator.ofFloat(view, "pivotY", y, y, y, y, y)
-        val object3: ObjectAnimator =
-            ObjectAnimator.ofFloat(view, "rotationX", 55f, -30f, 15f, -15f, 0f)
+        val object1 = ObjectAnimator.ofFloat(view, "pivotX", x, x, x, x, x)
+        val object2 = ObjectAnimator.ofFloat(view, "pivotY", y, y, y, y, y)
+        val object3 = ObjectAnimator.ofFloat(view, "rotationX", 55f, -30f, 15f, -15f, 0f)
 
         return AnimatorSet().apply {
             playTogether(object1, object2, object3)
@@ -96,16 +87,14 @@ object Attention : IAttention {
     }
 
     override fun Swing(view: View): AnimatorSet {
-        val object1: ObjectAnimator =
-            ObjectAnimator.ofFloat(view, "rotation", 0f, 10f, -10f, 6f, -6f, 3f, -3f, 0f)
-
+        val object1 = ObjectAnimator.ofFloat(view, "rotation", 0f, 10f, -10f, 6f, -6f, 3f, -3f, 0f)
         return AnimatorSet().apply {
             playTogether(object1)
         }
     }
 
     override fun Tada(view: View): AnimatorSet {
-        val object1: ObjectAnimator = ObjectAnimator.ofFloat(
+        val object1 = ObjectAnimator.ofFloat(
             view,
             "scaleX",
             1f,
@@ -119,7 +108,7 @@ object Attention : IAttention {
             1.1f,
             1f
         )
-        val object2: ObjectAnimator = ObjectAnimator.ofFloat(
+        val object2 = ObjectAnimator.ofFloat(
             view,
             "scaleY",
             1f,
@@ -133,7 +122,7 @@ object Attention : IAttention {
             1.1f,
             1f
         )
-        val object3: ObjectAnimator =
+        val object3 =
             ObjectAnimator.ofFloat(view, "rotation", 0f, -3f, -3f, 3f, -3f, 3f, -3f, 3f, -3f, 0f)
 
 
@@ -147,10 +136,9 @@ object Attention : IAttention {
             ((view.width - view.paddingLeft - view.paddingRight) / 2 + view.paddingLeft).toFloat()
         val y = (view.height - view.paddingBottom).toFloat()
 
-        val object1: ObjectAnimator =
-            ObjectAnimator.ofFloat(view, "rotation", 12f, -12f, 3f, -3f, 0f)
-        val object2: ObjectAnimator = ObjectAnimator.ofFloat(view, "pivotX", x, x, x, x, x)
-        val object3: ObjectAnimator = ObjectAnimator.ofFloat(view, "pivotY", y, y, y, y, y)
+        val object1 = ObjectAnimator.ofFloat(view, "rotation", 12f, -12f, 3f, -3f, 0f)
+        val object2 = ObjectAnimator.ofFloat(view, "pivotX", x, x, x, x, x)
+        val object3 = ObjectAnimator.ofFloat(view, "pivotY", y, y, y, y, y)
 
         return AnimatorSet().apply {
             playTogether(object1, object2, object3)
@@ -161,7 +149,7 @@ object Attention : IAttention {
         val width = (view.width).toFloat()
         val one = (width / 100.0).toFloat()
 
-        val object1: ObjectAnimator = ObjectAnimator.ofFloat(
+        val object1 = ObjectAnimator.ofFloat(
             view,
             "translationX",
             0f * one,
@@ -173,11 +161,12 @@ object Attention : IAttention {
             0f * one,
             0f
         )
-        val object2: ObjectAnimator =
+        val object2 =
             ObjectAnimator.ofFloat(view, "rotation", 0f, -5f, 3f, -3f, 2f, -1f, 0f)
 
         return AnimatorSet().apply {
             playTogether(object1, object2)
         }
     }
+
 }

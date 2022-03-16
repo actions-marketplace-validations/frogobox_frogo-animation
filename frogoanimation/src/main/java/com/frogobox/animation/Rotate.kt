@@ -33,7 +33,7 @@ Java version of the Rotate class
 https://github.com/gayankuruppu/android-view-animations-java/blob/master/library/src/main/java/render/animations/Rotate.java
 */
 
-object Rotate {
+object Rotate : IRotate{
     fun In(view: View): AnimatorSet {
         val animatorSet = AnimatorSet()
 
