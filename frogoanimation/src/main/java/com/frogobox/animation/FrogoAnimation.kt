@@ -54,9 +54,10 @@ class FrogoAnimation : IFrogoAnimation {
     }
 
     override fun start() {
-        animatorSet.duration = du
-        animatorSet.interpolator = AccelerateInterpolator()
-        animatorSet.start()
+        animatorSet.apply {
+            duration = du
+            interpolator = AccelerateInterpolator()
+        }.start()
     }
 
 }
