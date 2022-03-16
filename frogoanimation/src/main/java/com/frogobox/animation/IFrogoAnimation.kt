@@ -1,5 +1,7 @@
 package com.frogobox.animation
 
+import android.animation.AnimatorSet
+
 
 /*
  * Created by faisalamir on 16/03/22
@@ -15,4 +17,11 @@ package com.frogobox.animation
  */
 
 interface IFrogoAnimation {
+
+    fun setAnimation(animatorSet: AnimatorSet)
+
+    fun setDuration(duration: Long)
+
+    fun start()
+
 }

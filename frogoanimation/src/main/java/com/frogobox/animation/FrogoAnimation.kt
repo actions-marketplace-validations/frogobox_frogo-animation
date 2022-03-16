@@ -40,20 +40,20 @@ package com.frogobox.animation
 import android.animation.AnimatorSet
 import android.view.animation.AccelerateInterpolator
 
-class FrogoAnimation {
+class FrogoAnimation : IFrogoAnimation {
 
     private var du: Long = 1000
     private lateinit var animatorSet: AnimatorSet
 
-    fun setAnimation(animatorSet: AnimatorSet) {
+    override fun setAnimation(animatorSet: AnimatorSet) {
         this.animatorSet = animatorSet
     }
 
-    fun setDuration(duration: Long) {
+    override fun setDuration(duration: Long) {
         this.du = duration
     }
 
-    fun start() {
+    override fun start() {
         animatorSet.duration = du
         animatorSet.interpolator = AccelerateInterpolator()
         animatorSet.start()
