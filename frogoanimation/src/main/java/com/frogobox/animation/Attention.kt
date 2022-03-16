@@ -33,63 +33,54 @@ Java version of the Attention class
 https://github.com/gayankuruppu/android-view-animations-java/blob/master/library/src/main/java/render/animations/Attention.java
 */
 
-object Attention {
+object Attention : IAttention {
 
-    fun Bounce(view: View): AnimatorSet {
-        val animatorSet = AnimatorSet()
-
+    override fun Bounce(view: View): AnimatorSet {
         val object1: ObjectAnimator =
             ObjectAnimator.ofFloat(view, "translationY", 0f, 0f, -30f, 0f, -15f, 0f, 0f)
-
-        animatorSet.playTogether(object1)
-        return animatorSet
+        return AnimatorSet().apply {
+            playTogether(object1)
+        }
     }
 
-    fun Flash(view: View): AnimatorSet {
-        val animatorSet = AnimatorSet()
-
+    override fun Flash(view: View): AnimatorSet {
         val object1: ObjectAnimator = ObjectAnimator.ofFloat(view, "alpha", 1f, 0f, 1f, 0f, 1f)
-
-        animatorSet.playTogether(object1)
-        return animatorSet
+        return AnimatorSet().apply {
+            playTogether(object1)
+        }
     }
 
-    fun Pulse(view: View): AnimatorSet {
-        val animatorSet = AnimatorSet()
-
+    override fun Pulse(view: View): AnimatorSet {
         val object1: ObjectAnimator = ObjectAnimator.ofFloat(view, "scaleY", 1f, 1.1f, 1f)
         val object2: ObjectAnimator = ObjectAnimator.ofFloat(view, "scaleX", 1f, 1.1f, 1f)
-
-        animatorSet.playTogether(object1, object2)
-        return animatorSet
+        return AnimatorSet().apply {
+            playTogether(object1, object2)
+        }
     }
 
-    fun Ruberband(view: View): AnimatorSet {
-        val animatorSet = AnimatorSet()
-
+    override fun Ruberband(view: View): AnimatorSet {
         val object1: ObjectAnimator =
             ObjectAnimator.ofFloat(view, "scaleX", 1f, 1.25f, 0.75f, 1.15f, 1f)
         val object2: ObjectAnimator =
             ObjectAnimator.ofFloat(view, "scaleY", 1f, 0.75f, 1.25f, 0.85f, 1f)
 
-        animatorSet.playTogether(object1, object2)
-        return animatorSet
+        return AnimatorSet().apply {
+            playTogether(object1, object2)
+        }
     }
 
-    fun Shake(view: View): AnimatorSet {
-        val animatorSet = AnimatorSet()
-
+    override fun Shake(view: View): AnimatorSet {
         val object1: ObjectAnimator =
             ObjectAnimator.ofFloat(view, "scaleX", 1f, 1.25f, 0.75f, 1.15f, 1f)
         val object2: ObjectAnimator =
             ObjectAnimator.ofFloat(view, "scaleY", 1f, 0.75f, 1.25f, 0.85f, 1f)
 
-        animatorSet.playTogether(object1, object2)
-        return animatorSet
+        return AnimatorSet().apply {
+            playTogether(object1, object2)
+        }
     }
 
-    fun Standup(view: View): AnimatorSet {
-        val animatorSet = AnimatorSet()
+    override fun Standup(view: View): AnimatorSet {
         val x =
             ((view.width - view.paddingLeft - view.paddingRight) / 2 + view.paddingLeft).toFloat()
         val y = (view.height - view.paddingBottom).toFloat()
@@ -99,23 +90,21 @@ object Attention {
         val object3: ObjectAnimator =
             ObjectAnimator.ofFloat(view, "rotationX", 55f, -30f, 15f, -15f, 0f)
 
-        animatorSet.playTogether(object1, object2, object3)
-        return animatorSet
+        return AnimatorSet().apply {
+            playTogether(object1, object2, object3)
+        }
     }
 
-    fun Swing(view: View): AnimatorSet {
-        val animatorSet = AnimatorSet()
-
+    override fun Swing(view: View): AnimatorSet {
         val object1: ObjectAnimator =
             ObjectAnimator.ofFloat(view, "rotation", 0f, 10f, -10f, 6f, -6f, 3f, -3f, 0f)
 
-        animatorSet.playTogether(object1)
-        return animatorSet
+        return AnimatorSet().apply {
+            playTogether(object1)
+        }
     }
 
-    fun Tada(view: View): AnimatorSet {
-        val animatorSet = AnimatorSet()
-
+    override fun Tada(view: View): AnimatorSet {
         val object1: ObjectAnimator = ObjectAnimator.ofFloat(
             view,
             "scaleX",
@@ -148,12 +137,12 @@ object Attention {
             ObjectAnimator.ofFloat(view, "rotation", 0f, -3f, -3f, 3f, -3f, 3f, -3f, 3f, -3f, 0f)
 
 
-        animatorSet.playTogether(object1, object2, object3)
-        return animatorSet
+        return AnimatorSet().apply {
+            playTogether(object1, object2, object3)
+        }
     }
 
-    fun Wave(view: View): AnimatorSet {
-        val animatorSet = AnimatorSet()
+    override fun Wave(view: View): AnimatorSet {
         val x =
             ((view.width - view.paddingLeft - view.paddingRight) / 2 + view.paddingLeft).toFloat()
         val y = (view.height - view.paddingBottom).toFloat()
@@ -163,12 +152,12 @@ object Attention {
         val object2: ObjectAnimator = ObjectAnimator.ofFloat(view, "pivotX", x, x, x, x, x)
         val object3: ObjectAnimator = ObjectAnimator.ofFloat(view, "pivotY", y, y, y, y, y)
 
-        animatorSet.playTogether(object1, object2, object3)
-        return animatorSet
+        return AnimatorSet().apply {
+            playTogether(object1, object2, object3)
+        }
     }
 
-    fun Wobble(view: View): AnimatorSet {
-        val animatorSet = AnimatorSet()
+    override fun Wobble(view: View): AnimatorSet {
         val width = (view.width).toFloat()
         val one = (width / 100.0).toFloat()
 
@@ -187,7 +176,8 @@ object Attention {
         val object2: ObjectAnimator =
             ObjectAnimator.ofFloat(view, "rotation", 0f, -5f, 3f, -3f, 2f, -1f, 0f)
 
-        animatorSet.playTogether(object1, object2)
-        return animatorSet
+        return AnimatorSet().apply {
+            playTogether(object1, object2)
+        }
     }
 }
