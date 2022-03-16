@@ -11,7 +11,7 @@
 This Is Latest Release
 
     ~ Beta Release
-    $version_release = 0.0.1-beta01
+    $version_release = 0.0.1-beta02
 
 What's New??
 
@@ -55,28 +55,23 @@ allprojects {
 
         dependencies {
             // library frogo-animation
-            implementation 'com.github.frogobox:frogo-animation:0.0.1-beta01'
+            implementation 'com.github.frogobox:frogo-animation:0.0.1-beta02'
         }
 
     #### <Option 2> Kotlin DSL Gradle
 
         dependencies {
             // library frogo-animation
-            implementation("com.github.frogobox:frogo-animation:0.0.1-beta01")
+            implementation("com.github.frogobox:frogo-animation:0.0.1-beta02")
         }
 
 ## Step 3. Call FrogoAnimation
 
 ```kotlin
-// Declare TextView
-val textView: TextView = findViewById(R.id.TextView)
-
-// Create Render Class
- val render = Render(this)
-
-// Set Animation
-render.setAnimation(Bounce().InDown(textView))
-render.start()
+FrogoAnimation().apply {
+    setAnimation(Bounce.In(binding.TextView))
+    setDuration(1500)
+}.start()
 ```
 
 ## Animations
