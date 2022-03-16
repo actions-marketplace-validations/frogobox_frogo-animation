@@ -2,7 +2,7 @@ package com.frogobox.appanimation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.frogobox.animation.Bounce
+import com.frogobox.animation.core.Bounce
 import com.frogobox.animation.FrogoAnimation
 import kotlin.render.demo.databinding.ActivityMainBinding
 

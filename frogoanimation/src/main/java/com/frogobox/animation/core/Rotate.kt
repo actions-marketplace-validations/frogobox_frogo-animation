@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package com.frogobox.animation
+package com.frogobox.animation.core
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
@@ -33,7 +33,7 @@ Java version of the Rotate class
 https://github.com/gayankuruppu/android-view-animations-java/blob/master/library/src/main/java/render/animations/Rotate.java
 */
 
-object Rotate : IRotate{
+object Rotate : IRotate {
     fun In(view: View): AnimatorSet {
         val animatorSet = AnimatorSet()
 

@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package com.frogobox.animation
+package com.frogobox.animation.core
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
@@ -34,7 +34,7 @@ Java version of the Slide class
 https://github.com/gayankuruppu/android-view-animations-java/blob/master/library/src/main/java/render/animations/Slide.java
 */
 
-object Slide : ISlide{
+object Slide : ISlide {
     fun InDown(view: View): AnimatorSet {
         val animatorSet = AnimatorSet()
         val distance = (view.top + view.height).toFloat()

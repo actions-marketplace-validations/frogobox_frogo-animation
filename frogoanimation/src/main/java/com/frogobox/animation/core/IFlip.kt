@@ -1,4 +1,4 @@
-package com.frogobox.animation
+package com.frogobox.animation.core
 
 
 /*
@@ -14,5 +14,5 @@ package com.frogobox.animation
  *
  */
 
-interface IFade {
+interface IFlip {
 }

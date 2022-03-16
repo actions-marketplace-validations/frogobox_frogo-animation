@@ -59,5 +59,4 @@ class FrogoAnimation {
         animatorSet.start()
     }
 
-
 }

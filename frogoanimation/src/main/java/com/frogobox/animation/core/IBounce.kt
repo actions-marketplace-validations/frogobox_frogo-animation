@@ -1,4 +1,7 @@
-package com.frogobox.animation
+package com.frogobox.animation.core
+
+import android.animation.AnimatorSet
+import android.view.View
 
 
 /*
@@ -14,5 +17,16 @@ package com.frogobox.animation
  *
  */
 
-interface IRotate {
+interface IBounce {
+
+    fun In(view: View): AnimatorSet
+
+    fun InLeft(view: View): AnimatorSet
+
+    fun InRight(view: View): AnimatorSet
+
+    fun InUp(view: View): AnimatorSet
+
+    fun InDown(view: View): AnimatorSet
+
 }

@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package com.frogobox.animation
+package com.frogobox.animation.core
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
@@ -34,7 +34,8 @@ https://github.com/gayankuruppu/android-view-animations-java/blob/master/library
 */
 
 
-object Flip : IFlip{
+object Flip : IFlip {
+
     fun InX(view: View): AnimatorSet {
         val animatorSet = AnimatorSet()
 

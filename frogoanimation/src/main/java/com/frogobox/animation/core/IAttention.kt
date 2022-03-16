@@ -1,4 +1,4 @@
-package com.frogobox.animation
+package com.frogobox.animation.core
 
 import android.animation.AnimatorSet
 import android.view.View
